@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 33% 95%;
+    --foreground: 30 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 38 86% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 30% 92%;
+    --secondary-foreground: 38 40% 25%;
+
+    --muted: 40 20% 93%;
+    --muted-foreground: 30 10% 45%;
+
+    --accent: 40 50% 95%;
+    --accent-foreground: 38 86% 38%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 38 30% 88%;
+    --input: 38 30% 88%;
+    --ring: 38 86% 38%;
+
+    --radius: 0.5rem;
+
+    --gold-primary: 38 86% 38%;
+    --gold-light: 42 78% 46%;
+    --gold-dark: 38 84% 29%;
+    --gold-bg: 42 100% 95%;
+    --cream: 45 33% 97%;
+    --sidebar-bg: 36 16% 9%;
+    --sidebar-text: 32 50% 87%;
+    --sidebar-muted: 38 20% 44%;
+    --success: 142 72% 29%;
+    --warning: 32 95% 44%;
+    --danger: 0 72% 51%;
+    --info: 217 91% 60%;
+
+    --sidebar-background: 36 16% 9%;
+    --sidebar-foreground: 32 50% 87%;
+    --sidebar-primary: 38 86% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 36 16% 15%;
+    --sidebar-accent-foreground: 32 50% 87%;
+    --sidebar-border: 36 16% 18%;
+    --sidebar-ring: 38 86% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Be Vietnam Pro', Inter, sans-serif;
+  }
+}
+
+@layer utilities {
+  .card-shadow {
+    box-shadow: 0 2px 8px rgba(184, 134, 11, 0.12);
+  }
+
+  .stat-card {
+    @apply bg-card rounded-xl card-shadow border-l-4 p-4;
+    border-left-color: hsl(var(--gold-primary));
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(var(--gold-primary)), hsl(var(--gold-light)));
+  }
+
+  .table-header {
+    background-color: hsl(var(--gold-bg));
+    color: hsl(var(--gold-dark));
+    font-weight: 600;
+  }
+
+  .table-row-alt:nth-child(even) {
+    background-color: #FFFDF5;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
