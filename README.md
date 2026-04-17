@@ -133,18 +133,3 @@ Truy cập [http://localhost:5173](http://localhost:5173) và đăng nhập.
 3. **Settings → Environment Variables** → thêm `VITE_SUPABASE_URL` và `VITE_SUPABASE_PUBLISHABLE_KEY`
 4. Redeploy
 
----
-
-## Câu hỏi thường gặp
-
-**Trang `/setup` báo lỗi khi tạo admin?**
-→ Edge Function `init-admin` chưa được deploy. Làm lại Bước 6.
-
-**Tạo nhân viên không được?**
-→ Edge Function `create-user` chưa deploy. Kiểm tra Supabase dashboard → Edge Functions.
-
-**Báo cáo không có dữ liệu?**
-→ Cần có hoá đơn đã thanh toán trong khoảng ngày đã chọn. Vào **Cài đặt → Dữ liệu → Tạo dữ liệu mẫu** để test thử.
-
-**Muốn đổi tên cửa hàng, logo, SĐT?**
-→ Trong app → **Cài đặt → Cửa hàng**.
