@@ -118,7 +118,7 @@ export default function ProductDetail() {
     const category = storefrontCategories.find((item) => item.id === product?.category_id || item.name === product?.category_name);
     return category?.image_url || product?.image_url || productFallbackImage;
   }, [product]);
-  const detailImages = [product.image_url, categoryImage, product.gallery?.[1]].filter(Boolean) as string[];
+  const detailImages = [product?.image_url, categoryImage, product?.gallery?.[1]].filter(Boolean) as string[];
 
   const submitAuth = async (event: React.FormEvent) => {
     event.preventDefault();
