@@ -26,7 +26,7 @@ export default function Login() {
       setLoading(false);
       return;
     }
-    navigate("/products");
+    navigate("/admin/products");
   };
 
   return (
@@ -36,9 +36,11 @@ export default function Login() {
     >
       <div className="w-full max-w-md bg-card rounded-2xl p-8 card-shadow">
         <div className="text-center mb-8">
-          <div className="text-5xl mb-3">🌾</div>
-          <h1 className="text-xl font-bold text-gold">Cung Cấp Thực Phẩm Sỉ Và Lẻ</h1>
-          <p className="text-sm text-muted-foreground mt-1">Uy tín – Chất lượng – Giá tốt</p>
+          <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-xl bg-gold text-2xl font-bold text-primary-foreground">
+            POS
+          </div>
+          <h1 className="text-xl font-bold text-gold">Đăng nhập quản trị</h1>
+          <p className="text-sm text-muted-foreground mt-1">Quản lý bán hàng, kho, hoá đơn và báo cáo</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -48,7 +50,7 @@ export default function Login() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="admin@thucpham.vn"
+              placeholder="admin@cuahang.com"
               className="mt-1"
               required
             />

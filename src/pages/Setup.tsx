@@ -45,7 +45,7 @@ export default function Setup() {
       return;
     }
     toast.success('Tạo tài khoản admin thành công! Đang chuyển đến trang đăng nhập...');
-    setTimeout(() => navigate('/login'), 1500);
+    setTimeout(() => navigate('/admin/login'), 1500);
   };
 
   if (checking) {
@@ -63,7 +63,7 @@ export default function Setup() {
           <ShieldCheck size={48} className="mx-auto text-gold" />
           <h1 className="text-lg font-bold">Hệ thống đã được thiết lập</h1>
           <p className="text-sm text-muted-foreground">Trang này chỉ dùng để tạo tài khoản admin lần đầu. Vui lòng đăng nhập.</p>
-          <Button className="bg-gold hover:bg-gold-dark text-primary-foreground w-full" onClick={() => navigate('/login')}>
+          <Button className="bg-gold hover:bg-gold-dark text-primary-foreground w-full" onClick={() => navigate('/admin/login')}>
             Đến trang đăng nhập
           </Button>
         </div>

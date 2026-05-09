@@ -19,14 +19,14 @@ import { useStoreSettings } from "@/hooks/useStoreSettings";
 import { supabase } from "@/integrations/supabase/client";
 
 const allNavItems = [
-  { icon: Home, label: "Tổng quan", path: "/", moduleKey: "dashboard" },
-  { icon: ShoppingCart, label: "Bán hàng", path: "/pos", moduleKey: "pos" },
-  { icon: Package, label: "Hàng hoá", path: "/products", moduleKey: "products" },
-  { icon: Users, label: "Khách hàng", path: "/customers", moduleKey: "customers" },
-  { icon: FileText, label: "Hoá đơn", path: "/invoices", moduleKey: "invoices" },
-  { icon: UserCog, label: "Nhân viên", path: "/staff", moduleKey: "staff" },
-  { icon: BarChart3, label: "Báo cáo", path: "/reports", moduleKey: "reports" },
-  { icon: Settings, label: "Cài đặt", path: "/settings", moduleKey: "settings" },
+  { icon: Home, label: "Tổng quan", path: "/admin", moduleKey: "dashboard" },
+  { icon: ShoppingCart, label: "Bán hàng", path: "/admin/pos", moduleKey: "pos" },
+  { icon: Package, label: "Hàng hoá", path: "/admin/products", moduleKey: "products" },
+  { icon: Users, label: "Khách hàng", path: "/admin/customers", moduleKey: "customers" },
+  { icon: FileText, label: "Hoá đơn", path: "/admin/invoices", moduleKey: "invoices" },
+  { icon: UserCog, label: "Nhân viên", path: "/admin/staff", moduleKey: "staff" },
+  { icon: BarChart3, label: "Báo cáo", path: "/admin/reports", moduleKey: "reports" },
+  { icon: Settings, label: "Cài đặt", path: "/admin/settings", moduleKey: "settings" },
 ];
 
 export default function AppLayout() {
@@ -77,7 +77,7 @@ export default function AppLayout() {
 
   const handleSignOut = async () => {
     await signOut();
-    navigate("/login");
+    navigate("/admin/login");
   };
 
   return (
@@ -185,7 +185,7 @@ export default function AppLayout() {
         </header>
 
         <main
-          className={`flex-1 pb-20 lg:pb-6 overflow-x-hidden ${location.pathname === "/pos" ? "p-0 lg:p-0" : "p-4 lg:p-6"}`}
+          className={`flex-1 pb-20 lg:pb-6 overflow-x-hidden ${location.pathname === "/admin/pos" ? "p-0 lg:p-0" : "p-4 lg:p-6"}`}
         >
           <Outlet />
         </main>

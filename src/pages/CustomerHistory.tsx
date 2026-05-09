@@ -78,7 +78,7 @@ export default function CustomerHistory() {
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-3">
-        <Button variant="ghost" size="sm" onClick={() => navigate('/customers')}><ArrowLeft size={16} className="mr-1" />Quay lại</Button>
+        <Button variant="ghost" size="sm" onClick={() => navigate('/admin/customers')}><ArrowLeft size={16} className="mr-1" />Quay lại</Button>
       </div>
 
       <div className="bg-card rounded-xl card-shadow p-4">
